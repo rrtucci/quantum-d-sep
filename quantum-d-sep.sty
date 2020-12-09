@@ -1,0 +1,142 @@
+\usepackage{graphicx}     %standard package. Note graphics<graphicx<epsfig
+\usepackage{color}     %standard package
+\usepackage{hyperref} %standard package written by Sebastian Rahtz
+%\usepackage{subeqn}    %allows equations 1a, 1b
+%\usepackage{subfig}    %allows figures 1a, 1b
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url} 
+\usepackage{bbm}%for indicator function
+%\bibliographystyle{alpha}
+
+\usepackage[nottoc]{tocbibind}
+
+\usepackage[color,matrix,frame,arrow]{xy}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[shortlabels]{enumitem}
+\usepackage{array}
+\usepackage{pdflscape}
+\usepackage{multicol, multirow}
+\usepackage{ctable}
+\usepackage{dirtree}
+
+%\usepackage{fdsymbol}
+
+\usepackage[vlined,ruled]{algorithm2e}
+\newcommand{\mycommfont}[1]{\small\ttfamily\textcolor{blue}{#1}}
+\SetCommentSty{mycommfont}
+
+\usepackage{cancel}
+\newcommand{\AP}[0]{
+{\color{red}\cancelto {A}{P}}}
+
+\usepackage{framed}
+
+\paperheight=11in
+\topmargin=0in
+\headheight=0in
+\headsep=0in
+\topskip=0in
+\textheight=8.5in
+\footskip=.5in
+
+\paperwidth=8.5in
+\oddsidemargin=.25in
+\evensidemargin=.25in
+\textwidth=6.0in
+\parindent=.5in
+
+\newtheorem{claim}{Claim}
+\newcommand{\proof}[0]{{\bf proof:} }
+\newcommand{\qed}[0]{\newline\noindent{\bf QED }}
+
+
+\newcommand{\bra}[1]{\langle#1|}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\av}[1]{\langle#1\rangle}
+\newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\tr}[0]{{\rm tr }}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\bsub}{\begin{subequations}}
+\newcommand{\esub}{\end{subequations}}
+\newcommand{\beqa}{\begin{eqnarray}}
+\newcommand{\eeqa}{\end{eqnarray}}
+\newcommand{\rarrow}[0]{\rightarrow}
+\newcommand{\larrow}[0]{\leftarrow}
+\newcommand{\Rarrow}[0]{\Rightarrow}
+\newcommand{\nRarrow}[0]{\nRightarrow}
+\newcommand{\Larrow}[0]{\Leftarrow}
+\newcommand{\nLarrow}[0]{\nLeftarrow}
+\newcommand{\ul}[1]{\underline{#1}}
+\newcommand{\ZZ}[0]{ {\mathbb{Z}}}
+\newcommand{\RR}[0]{{ \mathbb{R}} }
+\newcommand{\CC}[0]{{ \mathbb{C}} }
+\newcommand{\ground}{{}_{\stackrel{\stackrel{\displaystyle{\bot}}{-}}{.}}}
+\newcommand{\rva}[0]{{\ul{a}}}
+\newcommand{\rvb}[0]{{\ul{b}}}
+\newcommand{\rvc}[0]{{\ul{c}}}
+\newcommand{\rvd}[0]{{\ul{d}}}
+\newcommand{\rve}[0]{{\ul{e}}}
+\newcommand{\rvf}[0]{{\ul{f}}}
+\newcommand{\rvg}[0]{{\ul{g}}}
+\newcommand{\rvh}[0]{{\ul{h}}}
+\newcommand{\rvi}[0]{{\ul{i}}}
+\newcommand{\rvj}[0]{{\ul{j}}}
+\newcommand{\rvk}[0]{{\ul{k}}}
+\newcommand{\rvl}[0]{{\ul{l}}}
+\newcommand{\rvm}[0]{{\ul{m}}}
+\newcommand{\rvn}[0]{{\ul{n}}}
+\newcommand{\rvo}[0]{{\ul{o}}}
+\newcommand{\rvp}[0]{{\ul{p}}}
+\newcommand{\rvq}[0]{{\ul{q}}}
+\newcommand{\rvr}[0]{{\ul{r}}}
+\newcommand{\rvs}[0]{{\ul{s}}}
+\newcommand{\rvt}[0]{{\ul{t}}}
+\newcommand{\rvu}[0]{{\ul{u}}}
+\newcommand{\rvv}[0]{{\ul{v}}}
+\newcommand{\rvw}[0]{{\ul{w}}}
+\newcommand{\rvx}[0]{{\ul{x}}}
+\newcommand{\rvy}[0]{{\ul{y}}}
+\newcommand{\rvz}[0]{{\ul{z}}}
+\newcommand{\rvX}[0]{{\ul{X}}}
+\newcommand{\rvY}[0]{{\ul{Y}}}
+\newcommand{\rvZ}[0]{{\ul{Z}}}
+\newcommand{\rvA}[0]{{\ul{A}}}
+\newcommand{\rvB}[0]{{\ul{B}}}
+\newcommand{\rvC}[0]{{\ul{C}}}
+\newcommand{\rvD}[0]{{\ul{D}}}
+\newcommand{\proj}[0]{{\rm proj}}
+\newcommand{\diag}[0]{{\rm diag}}
+\newcommand{\biprod}[2]{\left[\begin{array}{c}#1\\#2\end{array}\right]^\times}
+\newcommand{\setofall}[2]{\{#1\}_{\forall #2}}
+\newcommand{\cala}[0]{{\cal A}}
+\newcommand{\calb}[0]{{\cal B}}
+\newcommand{\calc}[0]{{\cal C}}
+\newcommand{\cald}[0]{{\cal D}}
+\newcommand{\cale}[0]{{\cal E}}
+\newcommand{\calh}[0]{{\cal H}}
+\newcommand{\cali}[0]{{\cal I}}
+\newcommand{\call}[0]{{\cal L}}
+\newcommand{\caln}[0]{{\cal N}}
+\newcommand{\calp}[0]{{\cal P}}
+\newcommand{\cals}[0]{{\cal S}}
+\newcommand{\calt}[0]{{\cal T}}
+
+\newcommand{\lam}[0]{\lambda}
+\newcommand{\rvlam}[0]{{\ul{\lam}}}
+\newcommand{\alp}[0]{{\alpha}}
+\newcommand{\rvalp}[0]{{\ul{\alp}}}
+
+\newcommand{\norm}[1]{\parallel #1 \parallel_2}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+\newcommand{\darrow}[0]{{\downarrow}}
+
+\newcommand{\rdart}[0]{\Rightarrow}
+\newcommand{\ldart}[0]{\Leftarrow}
+\newcommand{\eps}[0]{\epsilon}
+\newcommand{\rveps}[0]{\ul{\eps}}
+\newcommand{\alli}[0]{\{0, 1, \ldots, nx-1\}}
+
+
