@@ -318,11 +318,11 @@ This is analogous
 to the classical Bayes rule 
 $P(a.|e.)=\caln(!a.)P(e.|a.)P(a.)$.
 
-Let $\calp_\lam$ 
+Let $\calp_\rvlam$ 
 be the 
 set of all 
 probability 
-distributions $P_\lam(\lam)$
+distributions $P_\rvlam(\lam)$
 with $\lam \in S_\rvlam$.
 
 Let $\calh_\rvx$ represent 
@@ -838,9 +838,10 @@ the following.
 
 \begin{claim}
 Suppose
-$\rvA., \rvB., \rvZ.$
+$\rvA., \rvB.$
 are disjoint multinodes
-of a DAG  $G$.
+of a DAG  $G$ with nodes $\rvx^{nx}$
+and let $\rvZ.=\rvx^{nx}-\rvA.-\rvB.$,
  
 $\rvA.\perp_G \rvB.|\rvZ.$ iff
 $E_{sq}(\rho_{\rvA., \rvB.})=0$.
