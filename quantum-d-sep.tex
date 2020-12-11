@@ -113,7 +113,8 @@ calculating SE.
 
 The open-source computer program
  Quantum Fog (Ref.\cite{qfog})
-written by Tucci assumes that
+written by Tucci assumes
+that
 both classical and quantum BP
  are valid, because
 it uses the 
@@ -125,7 +126,11 @@ algorithm\footnote{Discussed
 in chapter of Bayesuvius entitled 
 ``Juntion Tree Algorithm".}
 is a generalization of BP so as to 
-include bnets with loops.
+include bnets with loops.\footnote{
+The quantum version of JT used by the current version of
+Quantum Fog is not quite correct
+because it does not use the vector amplitudes defined
+in this paper.}
 
 Classical d-separation
 is 
@@ -249,69 +254,82 @@ the complement
 multinode of $\rva.$ by
 $\ul{a_.}^c=\rvx^{nx}-\rva.$ Then
 we define
-the amplitude $A(a.)$ by
+the {\bf vector amplitude} $\A(a.)$ by
 
 
 \beq 
-A(a.)=\caln(!a.)\sum_{a^c_.}A(x^{nx})
-\;,
+\A(a.)=\ket{A(a.)}=\ket{a.}\sum_{a^c_.}A(x^{nx})\ket{a.^c}
+\;.
 \eeq
-where the nomalization constant
-$\caln(!a.)$
-is defined so that
-$\sum_{a.}\abs{A(a.)}^2=1$.
+Note that
 
-
-We define the conditional amplitude $A(b.|a.)$ by
 \beq
-A(b.|a.)=
-\frac{A(b., a.)}{A(a.)}
+\sum_{a.}\av{A(a.)|A(a.)}=1
+\eeq
+and
+
+\beq
+P(a.)=\sum_{a^c.}\abs{\av{a., a.^c|A(a.)}}^2
+\;.
+\eeq
+
+
+
+We define the {\bf conditional vector amplitude} $\A(b.|a.)$ by
+\beq
+\A(b.|a.)=\ket{A(b.|a.)}=
+\frac{\A(b., a.)}{\A(a.)}
+\;.
 \eeq
 This is analogous to the definition
-of classical conditional
+of conditional
 probability,
 $P(b.|a.)=
-\frac{P(b., a.)}{P(a.)}$
+\frac{P(b., a.)}{P(a.)}$.
+Note that $\A(b.|a.)$
+isn't really a ket, it's a tuple
+of two kets, but it is convenient
+to represent it as a ket.
 
 
 Suppose $\rva., \rvb., \rvc.$
 are disjoint multinodes such that
 $\rva.\cup\rvb.\cup\rvc.=\rvx^{nx}$ Then
 \beqa
-\sum_{b.} A(a., b.)
+\sum_{b.} \A(a., b.)
 &=&
-\sum_{b.}\caln(!a., !b., !c.) \sum_{c.}A(a., b., c.)
+\sum_{b.} \sum_{c.}\A(a., b., c.)
 \\
 &=&
-\caln(!a.)A(a.)
+\A(a.)
 \eeqa
-This is analogous to the classical  marginalization 
+This is analogous to the probability  marginalization 
 rule $\sum_{b.}P(a., b.)=P(a.)$.
 
 Note that
 \beqa
-\sum_{b.} A(a.|b.)A(b.)
+\sum_{b.} \A(a.|b.)\A(b.)
 &=&
-\sum_{b.} A(a., b.)
+\sum_{b.} \A(a., b.)
 \\
 &=&
-\caln(!a.)A(a.)
+\A(a.)
 \;.
 \eeqa
 This
 is analogous to
-the  classical splitting rule $P(a.)=\sum_{b.}P(a.|b.)P(b.)$.
+the  probability splitting rule $P(a.)=\sum_{b.}P(a.|b.)P(b.)$.
 
 Suppose $\rva.$ and $\rve.$ are
 disjoint multinodes,
 with $\rve.$
 representing evidence. Note that
 \beqa
-A(a.|e.)&=&
-\caln(!a.)A(a., e.)
+\A(a.|e.)&=&
+\frac{\A(a., e.)}{\A(e.)}
 \\
 &=&
-\caln(!a.)A(e.|a.)A(a.)
+\frac{\A(e.|a.)\A(a.)}{\A(e.)}
 \;.
 \eeqa
 This is analogous
@@ -754,10 +772,10 @@ whenever a probability
 occurs in
 the classical proof, 
 it must be replaced
-by an amplitude
+by a vector amplitude
 in the quantum proof.
 Of course, probabilities
-and amplitudes are
+and vector amplitudes are
 normalized
 differently,
 but that should
@@ -767,7 +785,7 @@ Note
 that we have been
 careful
 to show
-that amplitudes
+that vector amplitudes
 can be conditioned and
 satisfy a splitting rule, 
 just like probabilities do.
@@ -893,7 +911,7 @@ in the quantum
 side
 if we replace
 probabilities
-by amplitudes,
+by vector amplitudes,
 we can
 conclude that
 the rules
@@ -906,13 +924,13 @@ modulus the
 replacement of
 probabilities
 by
-amplitudes.
+vector amplitudes.
 The
 difference in
 normalization
 of probabilities
 and 
-amplitudes
+vector amplitudes
 does not
 make
 the 
@@ -944,7 +962,7 @@ from the BP chapter in
 Bayesuvius,
 except that
 all $P$'s have been
-crossed out and replaced by $A$'s.
+crossed out and replaced by $\A$'s.
 
 
 
@@ -1163,10 +1181,10 @@ m^{(t)}_{\alp\ldart k}(x_k)
 case, 
 $f_\alp(x_{nb(\alp)})$
 stands for a real valued
-function (e.g., $P(x|y)$)
-whereas in the quantum case
-it stands for a complex valued
-function (e.g., $A(x|y)$).}
+function (e.g., $P(f_\alp=1|x_{nb(\alp)})$),
+whereas in the quantum case,
+it stands for a vector amplitude
+(e.g.,  $\A(f_\alp=1|x_{nb(\alp)})$).}
 
 \bibliographystyle{plain}
 \bibliography{references}
