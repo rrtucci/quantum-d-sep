@@ -245,7 +245,12 @@ A(x^{nx})
 \prod_j A(x_j|pa(\rvx_j))
 \;.
 \eeq
+Note that
 
+\beq
+\sum_{x^{nx}}\abs{A(x^{nx})}^2=1
+\;.
+\eeq
 
 Suppose
 $\rva., \rvb.$ are disjoint multinodes 
@@ -254,24 +259,33 @@ the complement
 multinode of $\rva.$ by
 $\ul{a_.}^c=\rvx^{nx}-\rva.$ Then
 we define
-the {\bf vector amplitude} $\A(a.)$ by
+the {\bf vector amplitude} $\A(a.)$ 
+and the probability $P(a.)$ by
 
 
 \beq 
-\A(a.)=\ket{A(a.)}=\ket{a.}\sum_{a^c_.}A(x^{nx})\ket{a.^c}
-\;.
-\eeq
-Note that
-
-\beq
-\sum_{a.}\av{A(a.)|A(a.)}=1
+\A(a.)=\ket{A(a.)}=\ket{a.}\sum_{a^c_.}A(a., a.^c)\ket{a.^c}
+\;,
 \eeq
 and
 
 \beq
-P(a.)=\sum_{a^c.}\abs{\av{a., a.^c|A(a.)}}^2
+P(a.)=
+\sum_{a.^c}\abs{A(a., a.^c)}^2
 \;.
 \eeq
+Note that $\sum_{a.} P(a.)=1$
+so $P(a.)$ is a bona
+fide probability
+distribution as the notation implies. Note also that 
+
+\beq
+\av{A(a.)|A(a.)}= P(a.)
+\;, 
+\eeq
+so you
+can think of $\A(a.)$
+as being a generalized square root of $P(a.)$.
 
 
 
@@ -287,9 +301,31 @@ probability,
 $P(b.|a.)=
 \frac{P(b., a.)}{P(a.)}$.
 Note that $\A(b.|a.)$
-isn't really a ket, it's a tuple
+isn't really a ket; it's a tuple
 of two kets, but it is convenient
 to represent it as a ket.
+We can also define the dual $\bA(b.|a.)$
+of $\A(b.|a.)$ so that
+the following equations are satisfied:
+
+\beq
+\bra{A}(b.|a.)=\bra{A(b.|a.)}=
+\frac{\bA(b., a.)}{\bA(a.)}
+\;,
+\eeq
+
+\beq
+\av{A(b.|a.)|A(b.|a.)}=
+\frac{\av{A(b.,a.)|A(b., a.)}}
+{\av{A(a.)|A(a.)}}=
+\frac{P(b., a.)}{P(a.)}=
+P(b.|a.)
+\;.
+\eeq
+Hence, you can think of 
+$\A(b.|a.)$
+as being a generalized square root
+of $P(b.|a.)$.
 
 
 Suppose $\rva., \rvb., \rvc.$
