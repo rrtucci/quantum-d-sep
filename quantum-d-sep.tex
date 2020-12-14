@@ -64,10 +64,10 @@ background information
 explained in the same style
 of notation as this paper. 
 
-Quantum Bayesian Networks were 
+Quantum Bayesian Networks (qbnets) were 
 first proposed by Tucci in Ref.\cite{qbnets1}.
 Ref.\cite{qbnets1} deals with pure quantum states only.
-Tucci later generalized quantum bnets 
+Tucci later generalized qbnets 
 to mixed states
 in
 Ref.\cite{qbnets-mixed}.
@@ -84,7 +84,7 @@ in chapter of Bayesuvius entitled
 Tucci has assumed or implied
 in previous work that d-separation
 and BP
-are valid for quantum bnets, but he
+are valid for qbnets, but he
 has never explicitly proven  this.
 This paper is intended to be a first
 step towards filling that gap.
@@ -215,7 +215,7 @@ of $x$.
 Consider
 a DAG with $nx$ nodes
 $\rvx^{nx}= (\rvx_i)_{i=0, 1, \ldots, nx-1}$.
-A quantum bnet 
+A qbnet 
 consists of such a DAG with 
 a TPM (transition probability matrix)
 attached to each node,
@@ -685,18 +685,17 @@ $$
 \caption{
 $S(\rvx:\rvy|\rvlam^d)$
 is nonzero 
-for the quantum bnet of panel $(a)$
-but zero for the quantum bnet of panel $(b)$.}
+for the qbnet of panel $(a)$
+but zero for the qbnet of panel $(b)$.}
 \label{fig-2-squares}
 \end{figure}
 Eq.(\ref{eq-full-a-sq-ent})
 can be represented
 graphically
-by the quantum bnet
+by the qbnet
  Fig.\ref{fig-2-squares}$(a)$.
 The TPMs, printed in blue,
-for the 2 quantum
-bnets $(a)$ and $(b)$ of
+for the 2 qbnets $(a)$ and $(b)$ of
 Fig.\ref{fig-2-squares},
 are as follows.
 
@@ -774,20 +773,18 @@ we have shown how, given
 any density  matrix
 $\rho\in \cald_{\rvx, \rvy, \rvlam}$,
 one can construct a
-quantum
-bnet.
+qbnet.
 This method
-of constructing a quantum bnet
+of constructing a qbnet
 from a density
 matrix $\rho$ (or vice versa,
 constructing a $\rho$
-from a quantum bnet)
+from a qbnet)
 can be
 generalized
 to
 finding
-a quantum 
-bnet
+a qbnet
 for any
 $\rho\in\cald_{\rvx^{nx}}$.
 for arbitrary $nx$.
@@ -1224,6 +1221,82 @@ function (e.g., $P(f_\alp=1|x_{nb(\alp)})$),
 whereas in the quantum case,
 it stands for a vector amplitude
 (e.g.,  $\A(f_\alp=1|x_{nb(\alp)})$).}
+
+\appendix
+\section{Appendix: Reduced qbnet}
+\begin{figure}[h!]
+$$
+\begin{array}{ccc}
+\xymatrix{
+&\rvlam\ar[dl]\ar[dr]
+\\
+\rvY&&\rvX\ar[ll]
+}
+&\;\;\;&
+\xymatrix{
+&\rvlam\ar[dl]\ar[dr]
+\\
+\rvY&&\rvX
+}
+\\
+(a)
+&&
+(b)
+\end{array}
+$$
+\caption{The 2 qbnets in
+Fig.\ref{fig-2-squares}
+can be reduced to these 2 qbnets
+if we set $\rvX=(\rvx, \rvx_0)$ and 
+$\rvY=(\rvy, \rvy_0)$.}
+\label{fig-2-triangles}
+\end{figure}
+
+Note that 
+the 2 qbnets in  Fig.\ref{fig-2-squares}
+can be reduced to the 2 qbnets in Fig.\ref{fig-2-triangles}
+if we set $\rvX=(\rvx, \rvx_0)$ and 
+$\rvY=(\rvy, \rvy_0)$.
+The node TPMs, printed in blue,
+of the qbnets in Fig.\ref{fig-2-triangles},
+are as follows:
+
+
+\beq\color{blue}
+A(\lam)=\sqrt{P(\lam)}
+\eeq
+
+
+\beq\color{blue}
+A(x,x_0|y_0, \lam)=
+\left\{
+\begin{array}{ll}
+ A(x|R_0, \lam)\sqrt{P(x_0|\lam)}
+&
+\text{for Fig.\ref{fig-2-triangles}$(a)$}
+\\
+A(x|x_0, \lam)\sqrt{P(x_0|\lam)}
+&
+\text{for Fig.\ref{fig-2-triangles}$(b)$ }
+\end{array}
+\right.
+\eeq
+
+\beq\color{blue}
+A(y, y_0|x, x_0, \lam)= 
+\left\{
+\begin{array}{ll}
+A(y|x, R_0, \lam)\sqrt{P(y_0|x_0,\lam)}
+&
+\text{for Fig.\ref{fig-2-triangles}$(a)$}
+\\
+A(y|y_0, \lam)\sqrt{P(y_0|\lam)}
+&
+\text{for Fig.\ref{fig-2-triangles}$(b)$ }
+\end{array}
+\right.
+\eeq
+
 
 \bibliographystyle{plain}
 \bibliography{references}
