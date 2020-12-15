@@ -264,7 +264,7 @@ and the probability $P(a.)$ by
 
 
 \beq 
-\A(a.)=\ket{A(a.)}=\sum_{a^c_.}A(a., a.^c)\ket{a.^c}
+\A(a.)=\ket{A(a.)}=\ket{a.}\sum_{a^c_.}A(a., a.^c)\ket{a.^c}
 \;,
 \eeq
 with boundary cases
@@ -390,13 +390,13 @@ Let $\calh_{\rvx, \rvy}=
 \calh_\rvx\otimes\calh_\rvy$.
 
 
-Let $\cald_\rvx$ be the set of
+Let $\cald_\rvx$ be the set of all
  density matrices acting on $\calh_\rvx$.
 Likewise, let $\cald_{\rvx, \rvy}$
 be the set of all density matrices
 acting on $\calh_{\rvx, \rvy}$.
 If $\rho_{\rvx,\rvy}\in \cald_{\rvx,\rvy}$,
-then let $\rho_\rvx$
+then $\rho_\rvx$
 will denote the partial trace
 $\tr_\rvy \rho_{\rvx, \rvy}$ .
 
@@ -494,7 +494,7 @@ only depends on the topology
 of the DAG. We will
 define quantum d-separation
 exactly as it
-it
+is
 defined classically.
 Whether the bnet has 
 probabilities
@@ -591,15 +591,15 @@ Hence,
 \rho^\lam_{\rvx, \rvy}
 =
 \sum_{x_0,y_0} 
-\left[
+\Big[
 \sum_{x,y}
 \ket{x}\ket{y}
 A(x,y|x_0, y_0, \lam) 
-\right]
+\Big]
 P(x_0,y_0|\lam)
-\left[
+\Big[
 h.c.
-\right]
+\Big]
 \eeq
 
 To make our
@@ -614,16 +614,16 @@ $R=(x, y)$. Then
 \rho_{\rvx, \rvy, \rvlam^d}
 =
 \sum_{R_0,\lam} 
-\left[\ket{\lam}
+\Big[\ket{\lam}
 \sum_{R}
 \ket{R}
 \underbrace{A(R|R_0, \lam)
 \sqrt{P(R_0|\lam)}
 \sqrt{P(\lam)}}_{A(R,R_0,\lam)}
-\right]
-\left[
+\Big]
+\Big[
 h.c.
-\right]
+\Big]
 \;.
 \eeq
 From the
