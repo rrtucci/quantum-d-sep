@@ -1246,17 +1246,20 @@ $$
 $$
 \caption{The 2 qbnets in
 Fig.\ref{fig-2-squares}
-can be reduced to these 2 qbnets
-if we set $\rvX=(\rvx, \rvx_0)$ and 
-$\rvY=(\rvy, \rvy_0)$.}
+can sometimes be reduced to these 2 qbnets.}
 \label{fig-2-triangles}
 \end{figure}
 
-Note that 
-the 2 qbnets in  Fig.\ref{fig-2-squares}
-can be reduced to the 2 qbnets in Fig.\ref{fig-2-triangles}
-if we set $\rvX=(\rvx, \rvx_0)$ and 
+Let $\rvX=(\rvx, \rvx_0)$ and 
 $\rvY=(\rvy, \rvy_0)$.
+Note that 
+if, as
+denoted in
+Eq.(\ref{eq-y0-indep}),
+$A(x|R_0,\lam)$ is
+independent of $y_0$, then  
+the 2 qbnets in  Fig.\ref{fig-2-squares}
+can be reduced to the 2 qbnets in Fig.\ref{fig-2-triangles},
 The node TPMs, printed in blue,
 of the qbnets in Fig.\ref{fig-2-triangles},
 are as follows:
@@ -1268,10 +1271,12 @@ A(\lam)=\sqrt{P(\lam)}
 
 
 \beq\color{blue}
-A(x,x_0|y_0, \lam)=
+A(x,x_0|{\color{red}\cancel{y_0}}
+, \lam)=
 \left\{
 \begin{array}{ll}
- A(x|R_0, \lam)\sqrt{P(x_0|\lam)}
+ A(x|{\color{red}\cancelto {x_0}{R_0}}
+, \lam)\sqrt{P(x_0|\lam)}
 &
 \text{for Fig.\ref{fig-2-triangles}$(a)$}
 \\
@@ -1280,6 +1285,7 @@ A(x|x_0, \lam)\sqrt{P(x_0|\lam)}
 \text{for Fig.\ref{fig-2-triangles}$(b)$ }
 \end{array}
 \right.
+\label{eq-y0-indep}
 \eeq
 
 \beq\color{blue}
